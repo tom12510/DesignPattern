@@ -4,7 +4,7 @@ package org.example.Segregate;
  * 违反接口隔离原则
  *
  */
-public interface UnSegregate {
+ interface UnSegregate {
     void operation1();
     void operation2();
     void operation3();
