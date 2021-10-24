@@ -8,7 +8,6 @@ class Base {
   // 把基础类方法和成员放到Base类
 }
 
-
 class Liskov_A {
     public int func1(int a, int b) {
         return a - b;
