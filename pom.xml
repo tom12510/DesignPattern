@@ -13,4 +13,12 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>lombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
 </project>
