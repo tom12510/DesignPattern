@@ -5,7 +5,10 @@ import org.example.Proxy.Implements.GamePlayerProxy;
 import org.example.Proxy.Implements.Proxy;
 import org.example.Proxy.Implements.RealSubject;
 import org.example.Proxy.Inerface.IGamePlayer;
+import org.example.Proxy.dynamic.GamePlayIH;
 import org.junit.Test;
+
+import java.lang.reflect.InvocationHandler;
 
 public class Client {
     @Test
@@ -40,6 +43,25 @@ public class Client {
         proxy.login("12344", "1234");
         proxy.killBoss();
         proxy.upgrade();
+    }
+
+    //动态代理实现
+    @Test
+    public void dynamicProxy() {
+        // 被代理类
+        IGamePlayer player = new GamePlayer("张三");
+        //代理类
+        InvocationHandler gamePlayIH = new GamePlayIH(player);
+        ClassLoader classLoader = player.getClass().getClassLoader();
+        /**
+         * loader 被代理类加载器
+         * class 代理类class
+         * 加强类逻辑
+         */
+        IGamePlayer o1 = (IGamePlayer) java.lang.reflect.Proxy.newProxyInstance(classLoader,
+                new Class[]{IGamePlayer.class}, gamePlayIH);
+        o1.login("124", "1234");
+        System.out.println(o1);
     }
 
 }
