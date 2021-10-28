@@ -6,4 +6,5 @@ package org.example.Composite.Case;
 public abstract class Component {
     // 个体和整体都具有的共享
     public abstract void doSomeThing();
+
 }

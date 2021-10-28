@@ -13,6 +13,19 @@ public class Branch implements IBranch {
     private String position = "";
 
     private int salary = 0;
+
+    private ICorp parent = null;
+
+    @Override
+    public void setParent(ICorp branch) {
+        this.parent = branch;
+    }
+
+    @Override
+    public ICorp getParent() {
+        return this.parent;
+    }
+
     //聚合ICop
     ArrayList<ICorp> subordinateList = new ArrayList<>();
 
