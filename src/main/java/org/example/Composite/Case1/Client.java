@@ -14,6 +14,8 @@ public class Client {
     // 生成树
     public static Branch compositeCorpTree() {
         Branch root = new Branch("miaomiaole", "Boss", 10000);
+        root.setParent(null);
+
         Branch developDep = new Branch("miaomiaole_1", "部门研发经理", 100000);
         Branch financeDep = new Branch("miaomiaole_2", "财务部经理", 20000);
         Branch salesDep = new Branch("miaomiaole_3", "销售部门经理", 1000);
@@ -38,9 +40,13 @@ public class Client {
         //开始组装
         // root ->{k,salesDep,financeDep,developDep} -> {zhengLaoLiu,firstDevGroup,secondDevGroup....}
         root.addSubordinate(k);
+        k.setParent(root);
         root.addSubordinate(salesDep);
+        salesDep.setParent(root);
         root.addSubordinate(financeDep);
+        financeDep.setParent(root);
         root.addSubordinate(developDep);
+        developDep.setParent(root);
 
         //研发部
         developDep.addSubordinate(zhengLaoLiu);
@@ -59,15 +65,16 @@ public class Client {
         financeDep.addSubordinate(j);
         return root;
     }
+
     //遍历整棵树,只要给我根节点，我就能遍历出所有的节点
-    public static String getTreeInfo(Branch root){
+    public static String getTreeInfo(Branch root) {
         ArrayList<ICorp> subordinateList = root.getSubordinate();
         String info = "";
-        for(ICorp s :subordinateList){
-            if(s instanceof Leaf){ //是员工就直接获得信息
-                info = info + s.getInfo()+"\n";
-            }else{ //是个小头目
-                info = info + s.getInfo() +"\n"+ getTreeInfo((Branch)s);
+        for (ICorp s : subordinateList) {
+            if (s instanceof Leaf) { //是员工就直接获得信息
+                info = info + s.getInfo() + "\n";
+            } else { //是个小头目
+                info = info + s.getInfo() + "\n" + getTreeInfo((Branch) s);
             }
         }
         return info;
