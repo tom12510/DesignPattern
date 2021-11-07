@@ -9,12 +9,19 @@ public abstract class HummerModel {
 
     public abstract void engineBoom();
 
-    //相同的代码已抽取 不允许重写
+    //模版方法 相同的代码已抽取 不允许重写
     public final void run() {
         this.start();
         this.engineBoom();
-        this.alarm();
+        if (this.isAlarm()) {
+            this.alarm();
+        }
         this.stop();
     }
+    // 钩子方法 影响run逻辑
+    protected boolean isAlarm() {
+        return true;
+    }
+
 
 }

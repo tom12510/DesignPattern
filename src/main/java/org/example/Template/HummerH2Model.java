@@ -1,6 +1,9 @@
 package org.example.Template;
 
 public class HummerH2Model extends HummerModel {
+
+    private boolean alarmFlag = true;
+
     @Override
     public void start() {
         System.out.println("悍马H2发动...");
@@ -20,6 +23,15 @@ public class HummerH2Model extends HummerModel {
     @Override
     public void engineBoom() {
         System.out.println("悍马H2引擎声音是这样在...");
+    }
+
+    // 重写 钩子方法(客户端决定模版执行逻辑)
+    protected boolean isAlarm() {
+        return this.alarmFlag;
+    }
+    // 钩子方法(客户端决定模版执行逻辑)
+    public void setAlarm(boolean isAlarm) {
+        this.alarmFlag = isAlarm;
     }
 
     // 相同的代码逻辑需要抽取
