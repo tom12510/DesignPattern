@@ -1,4 +1,4 @@
-package org.example.Command;
+package org.example.Command.Case1;
 
 public class ConcreteCommand2 extends Command {
 

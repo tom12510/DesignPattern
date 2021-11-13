@@ -1,4 +1,4 @@
-package org.example.Command;
+package org.example.Command.Case1;
 
 public class ConcreteCommand1 extends Command {
     //具体执行类

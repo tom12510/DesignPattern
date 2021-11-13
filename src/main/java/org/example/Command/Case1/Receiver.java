@@ -1,4 +1,4 @@
-package org.example.Command;
+package org.example.Command.Case1;
 
 /**
  * 接受者角色
