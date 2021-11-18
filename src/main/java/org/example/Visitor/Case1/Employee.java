@@ -1,4 +1,4 @@
-package org.example.Visitor;
+package org.example.Visitor.Case1;
 
 public abstract class Employee {
     public final static int MALE = 0;
@@ -43,4 +43,7 @@ public abstract class Employee {
 
     //拼装员工其他的信息
     protected abstract String getOtherInfo();
+
+    // 定义访问者
+    public abstract void accept(IVisitor visitor);
 }

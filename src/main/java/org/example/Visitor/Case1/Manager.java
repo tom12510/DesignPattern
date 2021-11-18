@@ -1,4 +1,4 @@
-package org.example.Visitor;
+package org.example.Visitor.Case1;
 
 public class Manager extends Employee {
     private String performance;
@@ -15,5 +15,14 @@ public class Manager extends Employee {
     @Override
     protected String getOtherInfo() {
         return "业绩" + this.performance + "\t";
+    }
+
+    /**
+     * 数据与逻辑分离
+     * @param visitor
+     */
+    @Override
+    public void accept(IVisitor visitor) {
+        visitor.visit(this);
     }
 }

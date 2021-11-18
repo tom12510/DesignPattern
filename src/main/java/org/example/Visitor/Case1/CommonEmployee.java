@@ -1,4 +1,4 @@
-package org.example.Visitor;
+package org.example.Visitor.Case1;
 
 public class CommonEmployee extends Employee {
 
@@ -15,5 +15,10 @@ public class CommonEmployee extends Employee {
     @Override
     protected String getOtherInfo() {
         return "工作" + this.job + "\t";
+    }
+
+    @Override
+    public void accept(IVisitor visitor) {
+        visitor.visit(this);
     }
 }
