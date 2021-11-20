@@ -1,4 +1,4 @@
-package org.example.Singleton;
+package org.example.Singleton.Case;
 
 public class UnsafeSingleton {
     private static UnsafeSingleton singleton = null;

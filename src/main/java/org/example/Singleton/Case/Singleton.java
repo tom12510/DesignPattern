@@ -1,4 +1,4 @@
-package org.example.Singleton;
+package org.example.Singleton.Case;
 
 /**
  * 单例模式通用代码  (线程安全)
