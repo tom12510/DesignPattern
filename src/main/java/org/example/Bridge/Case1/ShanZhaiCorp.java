@@ -1,4 +1,4 @@
-package org.example.Bridge;
+package org.example.Bridge.Case1;
 
 public class ShanZhaiCorp extends Corp {
 

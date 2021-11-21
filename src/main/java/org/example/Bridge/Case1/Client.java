@@ -1,4 +1,4 @@
-package org.example.Bridge;
+package org.example.Bridge.Case1;
 
 public class Client {
     public static void main(String[] args) {

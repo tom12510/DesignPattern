@@ -1,4 +1,4 @@
-package org.example.Bridge;
+package org.example.Bridge.Case1;
 
 public class HouseCorp extends Corp {
     // 生产具体产品公司 House

@@ -1,4 +1,4 @@
-package org.example.Bridge;
+package org.example.Bridge.Case1;
 
 /**
  * 具体产品类  满足 生产销售两个功能
