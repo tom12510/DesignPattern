@@ -1,4 +1,4 @@
-package org.example.Adapter.Case;
+package org.example.Adapter.Case2;
 
 /**
  * 被转换类
