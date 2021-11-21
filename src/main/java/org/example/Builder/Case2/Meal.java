@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 产品类
+ *  产品类 构造出具体的产品
  */
 public class Meal {
     private List<Item> items = new ArrayList<Item>();

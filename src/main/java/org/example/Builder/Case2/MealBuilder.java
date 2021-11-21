@@ -1,7 +1,7 @@
 package org.example.Builder.Case2;
 
 /**
- * 执行者
+ *  具体建造者
  */
 public class MealBuilder {
     public Meal prepareVegMeal() {

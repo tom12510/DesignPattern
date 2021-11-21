@@ -10,5 +10,5 @@ public class VegBurger extends Burger {
     public float price() {
         return 23f;
     }
-    StringBuilder
+
 }
