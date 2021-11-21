@@ -1,4 +1,4 @@
-package org.example.Builder;
+package org.example.Builder.Case1;
 
 /**
  * 抽象构者类(约束产品相关特性),由它来组件各种产品类型的电脑

@@ -1,4 +1,4 @@
-package org.example.Builder;
+package org.example.Builder.Case1;
 
 /**
  * 具体组装对象类

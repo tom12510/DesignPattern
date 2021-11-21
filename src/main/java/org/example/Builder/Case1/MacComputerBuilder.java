@@ -1,7 +1,4 @@
-package org.example.Builder;
-
-import org.example.Builder.ComputerBuilder;
-import org.example.Builder.Computer;
+package org.example.Builder.Case1;
 
 /**
  * 具体产品实现类与产品类依赖
