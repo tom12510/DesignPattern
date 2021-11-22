@@ -1,4 +1,4 @@
-package org.example.Decorator;
+package org.example.Decorator.Case1;
 
 /**
  * 抽象者装饰者

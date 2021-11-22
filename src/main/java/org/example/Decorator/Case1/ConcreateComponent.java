@@ -1,4 +1,4 @@
-package org.example.Decorator;
+package org.example.Decorator.Case1;
 
 /**
  * 具体实现类(实际执行逻辑)

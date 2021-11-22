@@ -1,4 +1,4 @@
-package org.example.Decorator;
+package org.example.Decorator.Case1;
 
 /**
  * 具体装饰类2
