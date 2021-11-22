@@ -1,7 +1,7 @@
 package org.example.Adapter.Case2;
 
 /**
- * 被转换类
+ * 转换类
  * 原有的接口
  */
 public class Adaptee {
